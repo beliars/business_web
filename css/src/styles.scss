@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic-ext);
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+$white: #fff;
+$red: #f00;
+$green: #0f0;
+$blue: #00f;
+
+h1 {
+	color: $white;
+	span {
+		color: $red;
+		p {
+			color: $green;
+			p {
+				color: $blue;
+			}
+		}
+	}
+}

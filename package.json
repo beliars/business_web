@@ -1,0 +1,35 @@
+{
+  "name": "business_web",
+  "version": "0.0.0",
+  "description": "Business Web Page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beliars/business_web.git"
+  },
+  "keywords": [
+    "business",
+    "web",
+    "js",
+    "html",
+    "css"
+  ],
+  "author": "Beliars",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/beliars/business_web/issues"
+  },
+  "devDependencies": {
+    "node-static": "~0.7.8",
+    "gulp": "~3.9.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-uglify": "~2.0.0",
+    "gulp-watch": "~4.3.9",
+    "gulp-notify": "~2.2.0",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-sass": "~2.3.2"
+  }
+}
