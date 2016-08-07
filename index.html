@@ -1,17 +1,150 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Title</title>
+	<title>Business Web</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/prod/styles.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="js/prod/script.js"></script>
 </head>
-<body>
-	<div class="wrapper">
 
+<body>
+	<div class="page_wrapper">
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#"><img src="img/header_icon.png" class="img-responsive" alt="header_icon"></a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Service</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Pricing table</a></li>
+							<li><a href="#">How it work</a></li>
+							<li><a href="#">Happy clients</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+	</header>
+	<section class="section_top">
+		<div class="section_top__heading">
+			<h2>Boost up your local business</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum typesetting.</p>
+		</div>
+		<div class="section_top__forms">
+			<form class="form-inline">
+				 <div class="form-group">
+					<label class="sr-only" for="full_name">Full Name</label>
+					<input type="text" class="form-control" id="full_name" placeholder="Full Name">
+				 </div>
+				 <div class="form-group">
+					<label class="sr-only" for="email">Email address</label>
+					<input type="email" class="form-control" id="email" placeholder="Email Address">
+				 </div>
+				  <div class="form-group">
+					<label class="sr-only" for="phone_number">Phone Number</label>
+					<input type="tel" class="form-control" id="phone_number" placeholder="Phone Number">
+				 </div>
+				 <button type="submit" class="btn btn-warning">REQUEST A QUOTE</button>			 
+			</form>
+		</div>
+	</section>
+	<section class="section_services">
+		<div class="section_services__heading">
+			<h2>Our services</h2>
+			<p>Lorem Ipsum is simply dummy Business industry.</p>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<div class="img-responsive col-md-2">
+							<img src="img/font-awesome_icon.png" alt="">
+						</div>
+						<div class="col-md-10">
+							<h4>Font-Awesome Icons</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standart dummy text ever since the 1500s, when an unknown printer.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<div class="img-responsive col-md-2">
+							<img src="img/responsive_icon.png" alt="">
+						</div>
+						<div class="col-md-10">
+							<h4>Fully responsive design</h4>
+							<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<div class="img-responsive col-md-2">
+							<img src="img/working-contact_icon.png" alt="">
+						</div>
+						<div class="col-md-10">
+							<h4>Working contact form</h4>
+							<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<div class="img-responsive col-md-2">
+							<img src="img/retina_icon.png" alt="">
+						</div>
+						<div class="col-md-10">
+							<h4>Retina ready icons here</h4>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humouror randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<div class="img-responsive col-md-2">
+							<img src="img/friendly_icon.png" alt="">
+						</div>
+						<div class="col-md-10">
+							<h4>Friendly code</h4>
+							<p>Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<div class="img-responsive col-md-2">
+							<img src="img/dollar_icon.png" alt="">
+						</div>
+						<div class="col-md-10">
+							<h4>Flat trendy landing design</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+	</footer>
 	</div>
 </body>
+
 </html>
