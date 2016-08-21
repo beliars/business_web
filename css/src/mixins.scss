@@ -1,0 +1,40 @@
+@mixin button_mixin {
+	height: 46px;
+	color: $w;
+	border-radius: 2px;
+	border: none;
+}
+
+@mixin h2_text_mixin {
+	font: 900 30px "Gotham";
+	text-transform: uppercase;
+
+}
+
+@mixin h3_text_mixin {
+	font: 700 16px Lato;
+	text-transform: uppercase;
+}
+
+@mixin section_heading {
+		h2 {
+			@include h2_text_mixin;
+			text-align: center;
+		}
+		
+		p {
+			font: 400 16px "Open Sans";
+			text-align: center;
+		}
+}
+
+@mixin heading_paddings {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+@mixin box-shadow($top, $left, $blur, $color) {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+}

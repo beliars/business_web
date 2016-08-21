@@ -1,69 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic-ext);
-@import url(https://fonts.googleapis.com/css?family=Lato);
-
-@font-face {
-    font-family: "Gotham";
-    src: url(../../fonts/GothamProBold.ttf); 
- }
-
 *{
     box-sizing: border-box;
-}
-
-body {
-    font-family: "Open Sans", Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-$w: #fff;
-$header_text_color: #868686;
-$bg_color_blue: #709dca;
-$bg_color_yellow: #ffbb42;
-$bg_color_about_section: #ffc155;
-
-@mixin button_mixin {
-	height: 46px;
-	background-color: $bg_color_yellow;
-	color: $w;
-	border-radius: 2px;
-	border: none;
+.border_red {
+	border: 1px solid red;
+	@include box-shadow(0, 0, 10px, rgba(0,0,0,0.5));
 }
 
-@mixin h2_text_mixin {
-	font: 900 30px "Gotham";
-	text-transform: uppercase;
-
-}
-
-@mixin h3_text_mixin {
-	font: 700 16px Lato;
-	text-transform: uppercase;
-}
-
-@mixin section_heading {
-		h2 {
-			@include h2_text_mixin;
-			text-align: center;
-		}
-		
-		p {
-			font: 400 16px "Open Sans";
-			text-align: center;
-		}
-}
-
-.test div {
-	background: url(../../img/basic_plan.png);
-	background: url(../../img/premium_plan.png);
-	background: url(../../img/gold_plan.png);
-	background-color: #e7edf3;
+#main_form .errors {
+	color: red;
+	font-size: 13px;
+	line-height: 15px;
+	height: 23px;
+	padding-bottom: 10px;
+	padding-top: 2px;
 }
 
 header {
-	font-family: Lato, Arial, sans-serif;
+	font: $font_lato;
 	font-size: 13.5px;
 	text-transform: uppercase;
 	
@@ -173,12 +131,11 @@ header {
 }
 
 .section_top {
-	min-height: 400px;
+//	min-height: 400px;
 	background-color: $bg_color_blue;
 	
 	.section_top__heading {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		@include heading_paddings;
 	}
 	
 	@include section_heading;
@@ -211,6 +168,29 @@ header {
 			border: none;
 		}
 	}
+	
+	.section_top__content {
+		
+		#topCarousel {
+			padding-top: 25px;
+			padding-bottom: 50px;
+			
+			.item {
+				img {
+					margin: 0 auto;
+				}
+			}
+			
+			.carousel-control.left, .carousel-control.right {
+				background-image: none;
+			}
+			
+			.carousel-indicators {
+				bottom: 3px;
+			}
+		}
+		
+	}
 }
 
 @media (max-width: 768px) {
@@ -225,13 +205,12 @@ header {
 	background-color: $w;
 	
 	.section_services__heading {
-		padding-top: 20px;
-		padding-bottom: 30px;
+		@include heading_paddings;
 		
 	@include section_heading;
 	
 		h2, p {
-			color: #394b50;
+			color: $grey;
 		}
 	}
 			
@@ -240,12 +219,12 @@ header {
 		
 		h3 {
 			@include h3_text_mixin;
-			color: #394b50;
+			color: $grey;
 			margin-top: 0;
 		}
 		
 		p {
-			font: 400 "Open Sans";
+			font: $font_open_sans_p;
 		}
 		
 		.row div {
@@ -262,7 +241,6 @@ header {
 	background-color: $bg_color_about_section;
 	border-top: 2px solid $bg_color_blue;
 	border-bottom: 2px solid $bg_color_blue;
-	padding: 0;
 	
 	.section_about__left_side {
 		padding: 0;
@@ -280,7 +258,7 @@ header {
 			}
 
 			p {
-				font: 400 13px "Open Sans";
+				font: $font_open_sans_p;
 				color: $w;
 				margin-bottom: 20px;
 			}
@@ -288,9 +266,7 @@ header {
 				@include button_mixin;
 			}
 		}
-		
 	}
-	
 }
 
 @media (max-width: 900px) and (min-width: 768px) {
@@ -325,22 +301,20 @@ header {
 	background-color: #e7edf3;
 	
 	.section_tariffs__heading {
-	
-	padding-top: 20px;
-	padding-bottom: 30px;
+		@include heading_paddings;
 		
 	@include section_heading;
 		
 		h2, p {	
-			color: #394b50;
+			color: $grey;
 		}
 	}
 	
 	.section_tariffs__tariff_plan {
 		background-color: $w;
-		border: 1px solid grey;
+		border: 1px solid #cec6c6;
 		text-align: center;
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 		
 		&:nth-child(2) {
 			border-left: none;
@@ -366,7 +340,8 @@ header {
 		}	
 		
 		p {
-			font: 300 13.5px Lato;
+			font: $font_lato;
+			font-size: 13.5px;
 			color: #b5bbc1;
 			text-transform: uppercase;
 			width: 90%;
@@ -385,6 +360,178 @@ header {
 	}
 }
 
-.row {
-	margin-right: 0;
+.section_how {
+	background: $w;
+		
+	.section_how__button {
+		margin-bottom: 30px;
+		
+		button {
+			@include button_mixin;
+		}
+	}
+	
+	.section_how__heading {
+		@include heading_paddings;
+		@include section_heading;
+	
+		h2, p {
+			color: $grey;
+		}
+	}
+	
+	.section_how__row {
+		width: 90%;
+		margin: 0 auto;
+		
+		.section_how__step {
+			
+			p {
+				padding: 25px 15px;
+			}
+		}
+	}
+}
+
+.section_clients {
+	background: $bg_color_yellow;
+	
+	.section_clients__heading {
+		@include heading_paddings;
+		@include section_heading;
+		color: $w;
+	}
+	
+	.section_clients__content {
+		.section_clients__content_line {
+			padding-bottom: 25px;
+			
+			.left, .right {
+				width: 40%;
+				padding-top: 30px;
+				background: $w;
+				min-height: 240px;
+				border-radius: 2px;
+				
+				h4 {
+					margin-top: 30px;
+					font: $font_lato;
+					font-size: 13px;
+					line-height: 18px;
+					min-height: 36px;
+					text-transform: uppercase;
+					
+					span {
+						color: $bg_color_yellow;
+					}
+				}
+				
+				p {
+					font: $font_open_sans_p;
+					font-size: 14px;
+					max-height: 135px;
+					overflow: hidden;
+					span {
+						font-size: 23px;
+						font-weight: 900;
+						font-style: italic;
+						color: #7b7b7b;
+					}
+				}
+			}
+			
+			.left {
+				margin-left: 7%;
+			}
+			
+			.right {
+				margin-right: 7%;
+			}
+		}
+		
+		.img-responsive {
+			margin: 0 auto;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.section_clients {
+		.section_clients__content {
+			.section_clients__content_line {
+				padding-bottom: 0;
+				.left, .right {
+					float: none!important;
+					width: 90%;
+					margin: 0 auto;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+.section_address {
+	background-color: $w;
+	
+	.section_address__heading {
+		@include heading_paddings;
+		
+	@include section_heading;
+		
+		h2, p {	
+			color: $grey;
+		}
+	padding-bottom: 5px;
+	}
+	
+	#map {
+		height: 300px;
+		width: 80%;
+		margin: 0 auto;
+		border-radius: 3px;
+		border: 1px solid #b2b5b7;
+		@include box-shadow(0, 0, 10px, rgba(0,0,0,0.5));
+		margin-bottom: 35px;
+		
+	}
+}
+
+footer {
+	text-align: center;
+	
+	.navigation {
+		background: $w;
+		
+		a {
+			font: $font_lato;
+			color: $grey;
+			text-transform: uppercase;
+			&:hover {
+				text-decoration: none;
+				color: darken($grey, 10%);
+			}
+		}
+		
+		p {
+			font: $font_lato;
+			font-size: 23px / 24px;
+		}
+	}
+	
+	.copyright {
+		background: $bg_color_blue;
+		
+		p {
+			font: $font_open_sans_p;
+			color: $w;
+			margin-bottom: 0;
+			line-height: 45px;
+			
+			span {
+				font-style: italic;
+			}
+		}
+	}
 }
