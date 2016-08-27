@@ -301,7 +301,7 @@ header {
 		
 	@include section_heading;
 		
-		h2, p {	
+		h3, p {	
 			color: $grey;
 		}
 	}
@@ -315,6 +315,17 @@ header {
 		&:nth-child(2) {
 			border-left: none;
 			border-right: none;
+		}
+		
+		&:hover {
+			background: $bg_color_blue;
+			cursor: pointer;
+			@include box-shadow(0, 0, 10px, rgba(0,0,0,0.5));
+			border: 1px solid transparent;
+			
+			h3, p {
+				color: $w;
+			}
 		}
 		
 		.img-responsive {
@@ -351,7 +362,11 @@ header {
 @media (max-width: 768px) {
 	.section_tariffs {
 		.section_tariffs__tariff_plan:nth-child(2) {
-			border: 1px solid grey;
+			border: 1px solid #cec6c6;
+			
+			&:hover {
+				border: 1px solid transparent;
+			}
 		}
 	}
 }
